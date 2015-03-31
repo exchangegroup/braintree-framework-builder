@@ -70,7 +70,7 @@ We need to make some header files in the Braintree framework public.
 
 * Change "Target Membership" of Braintree.h to "public".
 * Build again. You will see a new error: `'Braintree/Braintree-API.h' file not found`. Find `Braintree-API.h` file and make it "public".
-I use `Command-Shift-O` shortcut in Xcode to find files quickly.
+I use `Command-Shift-o` shortcut in Xcode to find files quickly.
 * Now build again. You will see `File not found` error message for yet another file. Find the file and make it "public"
 * Repeat "Build > Find > Make public" steps until there are no more errors.
 * You will also see the following errors `Include of non-modular header inside framework module …`, make those files "public" as well.
