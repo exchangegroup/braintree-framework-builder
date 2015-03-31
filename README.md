@@ -11,7 +11,7 @@ It is done to integrate Braintree SDK into an iOS project without using CocoaPod
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/00_create_builder_project.png' alt='Create Braintree framework builder project' >
 
-### Create Cocoa Touch Framework target
+### Create Cocoa Touch Framework the target
 
 1.  File > New > Target > Framework & Library > Cocoa Touch Framework.
 1. Use "Braintree" as "Product Name". No other name will work.
