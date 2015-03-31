@@ -29,8 +29,8 @@ FOUNDATION_EXPORT const unsigned char BraintreeVersionString[];
 
 ### Setup Braintree target
 
-1. In “Braintree” target, “Build Phases”, “Link Binary With Libraries” add “MessageUI” and “MobileCoreServices” frameworks.
-1. In “Braintree” target, “Build Phases”, "Other Linker Flags" add -ObjC.
+1. Add "MessageUI" and "MobileCoreServices" frameworks into “Braintree” target > “Build Phases” > “Link Binary With Libraries” .
+1. Add `-ObjC` into “Braintree” target > “Build Phases” > "Other Linker Flags".
 
 ### Using BraintreeSDK in View Controller
 
