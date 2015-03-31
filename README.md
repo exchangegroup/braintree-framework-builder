@@ -49,10 +49,12 @@ You can easily find a file by pressing Command-Shift-O.
 
 ### Add scripts for building framework.
 
+1. Create `scripts` directory in your project root.
+1. Add two script files to `scripts` directory: [build_framework.sh](https://github.com/exchangegroup/braintree-framework-builder/raw/master/scripts/build_framework.sh) and
+[common.sh](https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/common.sh).
+1. Add 'execute' permissions to those two scripts.
 
-
-I changed 33 files to Public which took me 10 minutes.
-
+### Build
 
 
 
