@@ -43,7 +43,9 @@ Let’s try using BraintreeSDK in View Controller.
 
 ### Making headers public
 
-We need to make some header files in the Braintree framework public.
+We need to make some header files in the Braintree framework public. 
+
+<ing src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/02_make_header_public.png' alt='Change header to public in Xcode' >
 
 1. Change “Target Membership” of Braintree.h to “public”.
 1. Build again. You will see a new error: `/Users/evgenyneu/code/ios/demo/braintree/BraintreeFrameworkBuilder/Braintree/Braintree.h:7:9: 'Braintree/Braintree-API.h' file not found`. Find `Braintree-API.h` file and make it `Public`.
