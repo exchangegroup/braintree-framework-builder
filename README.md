@@ -53,6 +53,8 @@ You `Braintree.h` file will look like this:
 
 * Add `-ObjC` into "Braintree" target > "Build Phases" > "Other Linker Flags".
 
+<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/05_add_linker_flag.png' alt='Add linker flag' >
+
 ### Using BraintreeSDK in View Controller
 
 Let’s try using BraintreeSDK in View Controller.
