@@ -75,7 +75,7 @@ Finally, you can use the `Braintree.framework` file in your app.
 1. In your app, select its target, "General" tab and look for "Embedded Binaries" section.
 1. Drag the `Braintree.framework` file you built in previous step into "Embedded Binaries".
 
-### Check if Braintree SDk is working in your app
+### Check if Braintree SDK is working in your app
 
 1. Add `#import <Braintree/Braintree.h>` into your view controller.
 1. Call a Braintree method in your view controller, like this: `Braintree *braintree = [Braintree braintreeWithClientToken: @"my token"];`
