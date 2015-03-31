@@ -54,7 +54,7 @@ I use Command-Shift-O shortcut in Xcode to find files quickly.
 1. Repeat "Build > Find > Make public" steps until there are no more errors.
 1. You will also see the following errors `Include of non-modular header inside framework module …`, make those files "public" as well.
 
-### Add scripts for building framework
+### Add scripts for building Braintree framework
 
 1. Create `scripts` directory in your project root.
 1. Add two script files to `scripts` directory: [build_framework.sh](https://github.com/exchangegroup/braintree-framework-builder/raw/master/scripts/build_framework.sh) and
