@@ -34,12 +34,16 @@ Those files are temporary so you can clone it into the Downloads or Documents di
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/01_braintree_target_group_structure.png' alt='braintree target structure in project navigator' >
 
-* Paste the following code into Braintree.h after `#import <UIKit/UIKit.h>` line.
+* Paste the following code into `Braintree.h` file after `#import <UIKit/UIKit.h>` line.
 
 ```
 FOUNDATION_EXPORT double BraintreeVersionNumber;
 FOUNDATION_EXPORT const unsigned char BraintreeVersionString[];
 ```
+
+You `Braintree.h` file will look like this:
+
+<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/03_export_framework_version.png' alt='Export braintree framework version' >
 
 ### Setup Braintree target
 
