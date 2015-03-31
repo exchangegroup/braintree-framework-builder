@@ -48,6 +48,9 @@ You `Braintree.h` file will look like this:
 ### Setup Braintree target
 
 * Add "MessageUI" and "MobileCoreServices" frameworks into "Braintree" target > "Build Phases" > "Link Binary With Libraries" .
+ 
+<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/04_link_binary_with_libraries.png' alt='Link binary withlibraries' >
+
 * Add `-ObjC` into "Braintree" target > "Build Phases" > "Other Linker Flags".
 
 ### Using BraintreeSDK in View Controller
