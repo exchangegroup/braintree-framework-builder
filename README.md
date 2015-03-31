@@ -6,19 +6,19 @@ It is done to integrate Braintree SDK into an iOS project without using CocoaPod
 ### Create new Application project
 
 1. File > New > Project > Application > Single View Application.
-1. Set “BraintreeFrameworkBuilder” as “Product Name” and Objective-C as language.
+1. Set "BraintreeFrameworkBuilder" as "Product Name" and Objective-C as language.
 
 ### Create Cocoa Touch Framework target
 
 1.  File > New Target > Framework & Library > Cocoa Touch Framework.
-1. Use “Braintree” as “Product Name”. No other name will work.
-1. Use Objective-C as “Language”.
+1. Use "Braintree" as "Product Name". No other name will work.
+1. Use Objective-C as "Language".
 
 ### Add braintree source code files to target
 
-1. Remove the automatically generated `Braintree.h` file from the “Braintree” group in project navigator. Select “Move to trash” for it.
+1. Remove the automatically generated `Braintree.h` file from the "Braintree" group in project navigator. Select "Move to trash" for it.
 1. Clone braintree_ios repository to some separate directory: `git clone https://github.com/braintree/braintree_ios.git`
-1. Drag the **contents** of braintree_ios/Braintree/ directory you just cloned into the Braintree group in Xcode. Important: drag not the “Braintree” directory, but all the files and folders from it. Your project navigatin will look like this:
+1. Drag the **contents** of braintree_ios/Braintree/ directory you just cloned into the Braintree group in Xcode. Important: drag not the "Braintree" directory, but all the files and folders from it. Your project navigatin will look like this:
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/01_braintree_target_group_structure.png' alt='braintree target structure in project navigator' >
 
@@ -31,8 +31,8 @@ FOUNDATION_EXPORT const unsigned char BraintreeVersionString[];
 
 ### Setup Braintree target
 
-1. Add "MessageUI" and "MobileCoreServices" frameworks into “Braintree” target > “Build Phases” > “Link Binary With Libraries” .
-1. Add `-ObjC` into “Braintree” target > “Build Phases” > "Other Linker Flags".
+1. Add "MessageUI" and "MobileCoreServices" frameworks into "Braintree" target > "Build Phases" > "Link Binary With Libraries" .
+1. Add `-ObjC` into "Braintree" target > "Build Phases" > "Other Linker Flags".
 
 ### Using BraintreeSDK in View Controller
 
@@ -43,16 +43,16 @@ Let’s try using BraintreeSDK in View Controller.
 
 ### Making headers public
 
-We need to make some header files in the Braintree framework public. 
+We need to make some header files in the Braintree framework public.
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/02_make_header_public.png' alt='Change header to public in Xcode' >
 
-1. Change “Target Membership” of Braintree.h to “public”.
-1. Build again. You will see a new error: `'Braintree/Braintree-API.h' file not found`. Find `Braintree-API.h` file and make it `Public`.
+1. Change "Target Membership" of Braintree.h to "public".
+1. Build again. You will see a new error: `'Braintree/Braintree-API.h' file not found`. Find `Braintree-API.h` file and make it "public".
 I use Command-Shift-O shortcut in Xcode to find files quickly.
-1. Now build again. You will see `File not found` error message for yet another file. Find the file and make it `Public`
-1. Repeat "Build > Find > Make Public" steps until there are no more errors.
-1. You will also see the following errors `Include of non-modular header inside framework module …`, make those files “Public” as well.
+1. Now build again. You will see `File not found` error message for yet another file. Find the file and make it "public"
+1. Repeat "Build > Find > Make public" steps until there are no more errors.
+1. You will also see the following errors `Include of non-modular header inside framework module …`, make those files "public" as well.
 
 ### Add scripts for building framework.
 
