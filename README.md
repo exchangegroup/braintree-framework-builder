@@ -5,8 +5,8 @@ It is done to integrate Braintree SDK into an iOS project without using CocoaPod
 
 ### Create new Application project
 
-1. File > New > Project > Application > Single View Application
-1. Set “Product Name” as “BraintreeFrameworkBuilder” and Objective-C as language.
+1. File > New > Project > Application > Single View Application.
+1. Set “BraintreeFrameworkBuilder” as “Product Name” and Objective-C as language.
 
 ### Create Cocoa Touch Framework target
 
@@ -16,7 +16,7 @@ It is done to integrate Braintree SDK into an iOS project without using CocoaPod
 
 ### Add braintree source code files to target
 
-1. Remove `Braintree.h` file from the “Braintree” group in project navigator. Select “Move to trash”.
+1. Remove the automatically generated `Braintree.h` file from the “Braintree” group in project navigator. Select “Move to trash” for it.
 1. Clone braintree_ios repository to some separate directory: `git clone https://github.com/braintree/braintree_ios.git`
 1. Drag the contents of braintree_ios/Braintree/ directory into the Braintree group in Xcode. Important: drag not the “Braintree” directory, but all the files and folders from it. The child groups of “Braintree” group will be “3D-Secure”, “API” etc. “Copy items if needed” is checked.
 1. Paste the following code into Braintree.h after `#import <UIKit/UIKit.h>` line.
