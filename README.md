@@ -54,7 +54,7 @@ I use Command-Shift-O shortcut in Xcode to find files quickly.
 1. Repeat "Build > Find > Make public" steps until there are no more errors.
 1. You will also see the following errors `Include of non-modular header inside framework module …`, make those files "public" as well.
 
-### Add scripts for building framework.
+### Add scripts for building framework
 
 1. Create `scripts` directory in your project root.
 1. Add two script files to `scripts` directory: [build_framework.sh](https://github.com/exchangegroup/braintree-framework-builder/raw/master/scripts/build_framework.sh) and
@@ -75,7 +75,7 @@ Finally, you can use the `Braintree.framework` file in your app.
 1. In your app, select its target, "General" tab and look for "Embedded Binaries" section.
 1. Drag the `Braintree.framework` file you built in previous step into "Embedded Binaries".
 
-### Check if it's working
+### Check if Braintree SDk is working in your app
 
 1. Add `#import <Braintree/Braintree.h>` into your view controller.
 1. Call a Braintree method in your view controller, like this: `Braintree *braintree = [Braintree braintreeWithClientToken: @"my token"];`
