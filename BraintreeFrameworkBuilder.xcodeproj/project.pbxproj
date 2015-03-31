@@ -2123,6 +2123,7 @@
 					"$(PROJECT_DIR)/Braintree/Data",
 					"$(PROJECT_DIR)/Braintree/PayPal/mSDK",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2147,6 +2148,7 @@
 					"$(PROJECT_DIR)/Braintree/Data",
 					"$(PROJECT_DIR)/Braintree/PayPal/mSDK",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2225,6 +2227,7 @@
 				2BC8A5421ACA6E9E0005B7B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2BC8A5471ACA6E9E0005B7B2 /* Build configuration list for PBXNativeTarget "BraintreeTests" */ = {
 			isa = XCConfigurationList;
@@ -2233,6 +2236,7 @@
 				2BC8A5441ACA6E9E0005B7B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

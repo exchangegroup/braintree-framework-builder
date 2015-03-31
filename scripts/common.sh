@@ -40,7 +40,6 @@ SDK_BUILD=$SDK_ROOT/mybuild
 function die() {
   echo ""
   echo "FATAL: $*" >&2
-  show_summary
   exit 1
 }
 

@@ -43,7 +43,6 @@ FRAMEWORK_NAME=Braintree
 # The directory where the universal framework is built
 UNIVERSAL_OUTPUTFOLDER=${SDK_BUILD}/${BUILDCONFIGURATION}-universal
 
-
 # 1. Build Device and Simulator versions
 # ---------------------------------------------
 
@@ -79,11 +78,29 @@ test -d "$UNIVERSAL_OUTPUTFOLDER" \
 
 cp -R "${SDK_BUILD}/${BUILDCONFIGURATION}-iphoneos/${FRAMEWORK_NAME}.framework" "${UNIVERSAL_OUTPUTFOLDER}/"
 
-# Step 3. Copy Swift modules (from iphonesimulator build) to the copied framework directory
-# Uncomment if you have swift modules
+# Step 3. Copy localization files.
 # ---------------------------------------------
 
-# cp -R "${SDK_BUILD}/${BUILDCONFIGURATION}-iphonesimulator/${FRAMEWORK_NAME}.framework/Modules/Framework.swiftmodule/." "${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/Modules/Framework.swiftmodule"
+function copy_localization() {
+  echo "Copying localization files from ${1} to ${2}.bundle."
+
+  UI_LOCALIZATION_BUNDLE_NAME=${2}.bundle
+  UI_LOCALIZATION_FOLDER="${UNIVERSAL_OUTPUTFOLDER}/${FRAMEWORK_NAME}.framework/${UI_LOCALIZATION_BUNDLE_NAME}"
+
+  test -d "$UI_LOCALIZATION_FOLDER" \
+    || mkdir -p "$UI_LOCALIZATION_FOLDER" \
+    || die "Could not create directory $UI_LOCALIZATION_FOLDER"
+
+  UI_LOCALIZATION_SOURCE_FOLDER=$SDK_ROOT/${1}
+
+  \cp -r \
+    $UI_LOCALIZATION_SOURCE_FOLDER/*.lproj \
+    $UI_LOCALIZATION_FOLDER/ \
+    || die "Error copying localization files"
+}
+
+copy_localization "Braintree/UI/Localization" "Braintree-UI-Localization"
+copy_localization "Braintree/Drop-In/Localization" "Braintree-Drop-In-Localization"
 
 # Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory
 # ---------------------------------------------
