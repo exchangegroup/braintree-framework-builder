@@ -59,7 +59,7 @@ You `Braintree.h` file will look like this:
 
 Let’s try using BraintreeSDK in View Controller.
 
-* Add `#import <Braintree/Braintree.h>`. to the top of `ViewController.m`.
+* Add `#import <Braintree/Braintree.h>` to your `ViewController.m`.
 * Build the project. You will see `'Braintree/Braintree.h' file not found` error.
 
 ### Making headers public
