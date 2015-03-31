@@ -1,7 +1,7 @@
 # Using Braintree iOS SDK without Cocoa Pods
 
 This guides shows how to build a `Braintree.framework` file from Braintree iOS SDK sources.
-It is done to integrate Braintree SDK into an iOS project without using CocoaPods.
+It is done to integrate Braintree SDK into an iOS Objective-C or Swift project without using CocoaPods.
 
 ### Create new Application project
 
