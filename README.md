@@ -13,7 +13,7 @@ It is done to integrate Braintree SDK into an iOS project without using CocoaPod
 
 ### Create Cocoa Touch Framework the target
 
-1.  File > New > Target > Framework & Library > Cocoa Touch Framework.
+1. File > New > Target > Framework & Library > Cocoa Touch Framework.
 1. Use "Braintree" as "Product Name". No other name will work.
 1. Use Objective-C as "Language".
 
@@ -21,8 +21,8 @@ It is done to integrate Braintree SDK into an iOS project without using CocoaPod
 
 ### Add braintree source code files to target
 
-1. Remove the automatically generated `Braintree.h` file from the "Braintree" group in project navigator. Select "Move to trash" for it.
-1. Clone braintree_ios repository to some separate directory:
+* Remove the automatically generated `Braintree.h` file from the "Braintree" group in project navigator. Select "Move to trash" for it.
+* Clone braintree_ios repository to some separate directory:
 
 ```
 git clone https://github.com/braintree/braintree_ios.git
@@ -30,11 +30,11 @@ git clone https://github.com/braintree/braintree_ios.git
 
 Those files are temporary so you can clone it into the Downloads or Documents directory, for example.
 
-Drag the **contents** of braintree_ios/Braintree/ directory you just cloned into the Braintree group in Xcode. Important: drag not the "Braintree" directory, but all the files and folders from it. Your project navigator will look like this:
+* Drag the **contents** of braintree_ios/Braintree/ directory you just cloned into the Braintree group in Xcode. Important: drag not the "Braintree" directory, but all the files and folders from it. Your project navigator will look like this:
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/01_braintree_target_group_structure.png' alt='braintree target structure in project navigator' >
 
-Paste the following code into Braintree.h after `#import <UIKit/UIKit.h>` line.
+* Paste the following code into Braintree.h after `#import <UIKit/UIKit.h>` line.
 
 ```
 FOUNDATION_EXPORT double BraintreeVersionNumber;
