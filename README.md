@@ -73,7 +73,7 @@ We need to make some header files in the Braintree framework public.
 I use `Command-Shift-o` shortcut in Xcode to find files quickly.
 * Now build again. You will see `File not found` error message for yet another file. Find the file and make it "public"
 * Repeat "Build > Find > Make public" steps until there are no more errors.
-* You will also see the following errors `Include of non-modular header inside framework module …`, make those files "public" as well.
+* In addition to `File not found` error you will also see `Include of non-modular header inside framework module …` errors. Make those complaining files "public" as well.
 1. I went through 33 header files in total, the work took about 10 minutes.
 
 ### Add scripts for building Braintree framework
