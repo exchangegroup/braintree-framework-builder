@@ -22,8 +22,15 @@ It is done to integrate Braintree SDK into an iOS project without using CocoaPod
 ### Add braintree source code files to target
 
 1. Remove the automatically generated `Braintree.h` file from the "Braintree" group in project navigator. Select "Move to trash" for it.
-1. Clone braintree_ios repository to some separate directory: `git clone https://github.com/braintree/braintree_ios.git`. Those files are temporary so you can clone it into the Downloads or Documents directory, for example.
-1. Drag the **contents** of braintree_ios/Braintree/ directory you just cloned into the Braintree group in Xcode. Important: drag not the "Braintree" directory, but all the files and folders from it. Your project navigatin will look like this:
+1. Clone braintree_ios repository to some separate directory:
+
+```
+git clone https://github.com/braintree/braintree_ios.git
+```
+
+Those files are temporary so you can clone it into the Downloads or Documents directory, for example.
+
+Finally, drag the **contents** of braintree_ios/Braintree/ directory you just cloned into the Braintree group in Xcode. Important: drag not the "Braintree" directory, but all the files and folders from it. Your project navigatin will look like this:
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/01_braintree_target_group_structure.png' alt='braintree target structure in project navigator' >
 
