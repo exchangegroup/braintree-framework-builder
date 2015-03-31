@@ -16,6 +16,8 @@ It is done to integrate Braintree SDK into an iOS project without using CocoaPod
 1. Use "Braintree" as "Product Name". No other name will work.
 1. Use Objective-C as "Language".
 
+<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/001_createBraintree_target.png' alt='Add braintree target' >
+
 ### Add braintree source code files to target
 
 1. Remove the automatically generated `Braintree.h` file from the "Braintree" group in project navigator. Select "Move to trash" for it.
