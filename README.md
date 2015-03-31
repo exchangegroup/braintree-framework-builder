@@ -48,8 +48,8 @@ We need to make some header files in the Braintree framework public.
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/02_make_header_public.png' alt='Change header to public in Xcode' >
 
 1. Change “Target Membership” of Braintree.h to “public”.
-1. Build again. You will see a new error: `/Users/evgenyneu/code/ios/demo/braintree/BraintreeFrameworkBuilder/Braintree/Braintree.h:7:9: 'Braintree/Braintree-API.h' file not found`. Find `Braintree-API.h` file and make it `Public`.
-You can easily find a file by pressing Command-Shift-O.
+1. Build again. You will see a new error: `'Braintree/Braintree-API.h' file not found`. Find `Braintree-API.h` file and make it `Public`.
+I use Command-Shift-O shortcut in Xcode to find files quickly.
 1. Now build again. You will see `File not found` error message for yet another file. Find the file and make it `Public`
 1. Repeat Build > Find > Make Public loop until there are no more errors.
 1. You will also see the following errors `Include of non-modular header inside framework module …`, make those files “Public” as well.
