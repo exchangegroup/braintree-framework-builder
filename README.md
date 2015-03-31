@@ -1,4 +1,4 @@
-# Building Braintree iOS SDK as Cocoa Touch Framework
+# Using Braintree iOS SDK without Cocoa Pods
 
 This guides shows how to build a `Braintree.framework` file from Braintree iOS SDK sources.
 It is done to integrate Braintree SDK into an iOS project without using CocoaPods.
