@@ -142,7 +142,7 @@ Finally! You can use the `Braintree.framework` file in your app.
 ### Use Braintree SDK in an Objective-C app
 
 * Add `#import <Braintree/Braintree.h>` into your view controller.
-* Call a Braintree method in your view controller, like this: `Braintree *braintree = [Braintree braintreeWithClientToken: @"my token"];`
+* Instantiate a Braintree object in your view controller: `[[Braintree alloc] init];`.
 
 My View Controller code looked like that:
 
@@ -180,7 +180,7 @@ To use Braintree SDK in a Swift app you will need to import its header in a brin
 #import <Braintree/Braintree.h>
 ```
 
-* Instanciate a `Braintree` object in your view controller, to check that it's working.
+* Instantiate a `Braintree` object in your view controller, to check that it's working.
 
 
 ```Swift
