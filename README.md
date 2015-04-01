@@ -166,6 +166,14 @@ My View Controller code looked like that:
 
 The app will crash with an error message from Braintree: "BTClient could not initialize because the provided clientToken was invalid". That means that our integration is working correctly. Job's done!
 
+### Use Braintree SDK in a Swift app
+
+To use Braintree SDK in a Swift app you will need to import its header in a brindging header.
+
+* To create a brindging header, select File > New > Source > Objective-C File. Name it anything you want, it will be a temporary file.
+* Click "Yes" in the next dialog that asks if you would like to configure a brindging header.
+
+
 ## Reference
 
 These are the materials I used to make this guide.
