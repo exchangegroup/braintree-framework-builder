@@ -180,7 +180,7 @@ To use Braintree SDK in a Swift app you will need to import its header in a brid
 #import <Braintree/Braintree.h>
 ```
 
-* Instantiate a `Braintree` object in your view controller, to check that it's working.
+* Instantiate a `Braintree` object in your view controller to check that it's working.
 
 
 ```Swift
