@@ -42,7 +42,7 @@ FOUNDATION_EXPORT double BraintreeVersionNumber;
 FOUNDATION_EXPORT const unsigned char BraintreeVersionString[];
 ```
 
-Your `Braintree.h` file will look like this:
+The top of your `Braintree.h` file will look like this:
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/03_export_framework_version.png' alt='Export braintree framework version' >
 
