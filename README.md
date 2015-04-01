@@ -123,7 +123,7 @@ chmod 764 common.sh
 ```
 
 It will build a universal framework into "mybuild/Braintree.framework". When build finishes
-it will open a Finder containing `Braintree.framework` file.
+it opens a Finder containing `Braintree.framework` file.
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/07_build_finished.png' alt='Finished building the framework' >
 
