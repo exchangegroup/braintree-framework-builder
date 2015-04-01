@@ -31,7 +31,7 @@ git clone https://github.com/braintree/braintree_ios.git
 
 Those files are temporary so you can clone it into the Downloads or Documents directory, for example.
 
-* Drag the **contents** of braintree_ios/Braintree/ directory you just cloned into the Braintree group in Xcode. Important: drag not the "Braintree" directory, but all the files and folders from it. Your project navigator will look like this:
+* Drag the **contents** of braintree_ios/Braintree/ directory you just cloned into the Braintree group in Xcode. Important: drag not the "braintree_ios/Braintree/" directory, but all the files and folders from it. Your project navigator will look like this:
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/01_braintree_target_group_structure.png' alt='braintree target structure in project navigator' >
 
