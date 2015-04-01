@@ -182,7 +182,7 @@ To use Braintree SDK in a Swift app you will need to import its header in a brid
 #import <Braintree/Braintree.h>
 ```
 
-* Instantiate a `Braintree` object in your view controller to check that it's working.
+* Instantiate a `Braintree` object in your view controller to check if it's working.
 
 
 ```Swift
@@ -218,7 +218,7 @@ These are the materials I used to make this guide.
 
 * Creating a static library in iOS tutorial: http://www.raywenderlich.com/41377/creating-a-static-library-in-ios-tutorial
 
-* Script for building combining iphoneos and iphonesimulator schemes and combining them into a universal framework: https://gist.github.com/cconway25/7ff167c6f98da33c5352
+* Script for building iphoneos and iphonesimulator schemes and combining them into a universal framework: https://gist.github.com/cconway25/7ff167c6f98da33c5352
 
 
 
