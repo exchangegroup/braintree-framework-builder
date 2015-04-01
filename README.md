@@ -106,12 +106,13 @@ chmod 764 common.sh
 
 ### Build
 
-* Run `build_framework.sh` script. It will build a universal framework, a Debug version. When build finishes
+* Run `build_framework.sh` script from the Terminal:
 
 ```
-./
+./build_framework.sh
 ```
 
+It will build a universal framework, a Debug version.. When build finishes
 it will open a Finder containing `Braintree.framework` file. In addition to code the framework
 file contains two bundles with localization strings.
 * If you have problem building it, check `PROJECT_NAME=BraintreeFrameworkBuilder` line in `build_framework.sh`. It needs to be the  name of the project.
