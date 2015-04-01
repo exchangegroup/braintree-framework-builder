@@ -139,7 +139,7 @@ Finally! You can use the `Braintree.framework` file in your app.
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/08_drag_framework.png' alt='Drag braintree framework to Embedded Binaries' >
 
-### Check if Braintree SDK is working in your app
+### Use Braintree SDK in an Objective-C app
 
 * Add `#import <Braintree/Braintree.h>` into your view controller.
 * Call a Braintree method in your view controller, like this: `Braintree *braintree = [Braintree braintreeWithClientToken: @"my token"];`
