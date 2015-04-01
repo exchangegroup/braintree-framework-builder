@@ -153,8 +153,8 @@ Finally! You can use the `Braintree.framework` file in your app.
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  // will crash with error "BTClient could not initialize because the provided clientToken was invalid"
-  // Which is what we want. It means Braintree SDK is loaded.
+  // Will crash with error "BTClient could not initialize because the provided clientToken was invalid"
+  // Which is what we want. It means Braintree SDK is wokring!
   [Braintree braintreeWithClientToken:@"client_token"];
 }
 
