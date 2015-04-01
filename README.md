@@ -144,7 +144,7 @@ Finally! You can use the `Braintree.framework` file in any of your apps.
 ### Use Braintree SDK in an Objective-C app
 
 * Add `#import <Braintree/Braintree.h>` into your view controller.
-* Instantiate a Braintree object in your view controller: `[[Braintree alloc] init];`.
+* Instantiate a Braintree object in your view controller: `[[Braintree alloc] init];`
 
 My View Controller code looked like that:
 
