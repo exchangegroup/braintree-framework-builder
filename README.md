@@ -163,7 +163,7 @@ My view controller code looked like that:
 @end
 ```
 
-* Run the app. If it runs it means that our Braintree SDK integration is working correctly.
+* Run the app. If it runs it means that your Braintree SDK integration is working correctly.
 
 ### Use Braintree SDK in a Swift app
 
