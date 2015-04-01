@@ -128,7 +128,7 @@ it opens a Finder containing `Braintree.framework` file.
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/07_build_finished.png' alt='Finished building the framework' >
 
 
-In addition to code the framework contains two bundles with localization strings. That's where frameworks are handy - they can contain resources.
+In addition to the executable code the framework contains two bundles with localization strings. That's where frameworks are handy - they can contain assets.
 
 If you have problem building the framework, check `PROJECT_NAME=BraintreeFrameworkBuilder` line in `build_framework.sh`. It needs to be the name of your project.
 
