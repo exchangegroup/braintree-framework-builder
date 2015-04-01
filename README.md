@@ -1,6 +1,6 @@
 # Using Braintree iOS SDK without Cocoa Pods
 
-This guides shows how to build a `Braintree.framework` file from Braintree iOS SDK sources. Once built, you will be able to just drag `Braintree.framework` to any of your apps, Objectice-C or Swift. 
+This guides shows how to build a `Braintree.framework` file from Braintree iOS SDK sources. Once built, you will be able to just drag `Braintree.framework` to any of your apps, Objectice-C or Swift.
 
 ### Create new Application project
 
@@ -47,7 +47,7 @@ You `Braintree.h` file will look like this:
 ### Setup Braintree target
 
 * Add "MessageUI" and "MobileCoreServices" frameworks into "Braintree" target > "Build Phases" > "Link Binary With Libraries" .
- 
+
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/04_link_binary_with_libraries.png' alt='Link binary withlibraries' >
 
 * Add `-ObjC` into "Braintree" target > "Build Phases" > "Other Linker Flags".
@@ -77,14 +77,38 @@ I use `Command-Shift-o` shortcut in Xcode to find files quickly.
 
 ### Add scripts for building Braintree framework
 
-* Create `scripts` directory in your project root.
-* Add two script files to `scripts` directory: [build_framework.sh](https://github.com/exchangegroup/braintree-framework-builder/raw/master/scripts/build_framework.sh) and
+* Create `scripts` directory in your project root. I do it from a Terminal.
+
+```
+cd <your BraintreeFrameworkBuilder project directory>
+mkdir scripts
+```
+
+* Add two script files to `scripts` directory: [build_framework.sh](https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/build_framework.sh) and
 [common.sh](https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/common.sh).
+
+
+```
+cd scripts
+curl -O https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/build_framework.sh
+curl -O https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/common.sh
+```
+
 * Add 'execute' permissions to those two scripts.
+
+```
+chmod 764 build_framework.sh
+chmod 764 common.sh
+```
 
 ### Build
 
 * Run `build_framework.sh` script. It will build a universal framework, a Debug version. When build finishes
+
+```
+./
+```
+
 it will open a Finder containing `Braintree.framework` file. In addition to code the framework
 file contains two bundles with localization strings.
 * If you have problem building it, check `PROJECT_NAME=BraintreeFrameworkBuilder` line in `build_framework.sh`. It needs to be the  name of the project.
