@@ -68,7 +68,7 @@ Set a lower iOS deployment target version if you want to use the Braintree frame
 
 Let’s try using BraintreeSDK in View Controller.
 
-* Add `#import <Braintree/Braintree.h>` to your `ViewController.m`.
+* Add `#import <Braintree/Braintree.h>` to your `ViewController.m` of your "BraintreeFrameworkBuilder" of the same project.
 * Build the project. You will see `'Braintree/Braintree.h' file not found` error.
 
 ### Making headers public
