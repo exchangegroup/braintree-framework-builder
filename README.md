@@ -144,6 +144,8 @@ Finally! You can use the `Braintree.framework` file in your app.
 * Add `#import <Braintree/Braintree.h>` into your view controller.
 * Call a Braintree method in your view controller, like this: `Braintree *braintree = [Braintree braintreeWithClientToken: @"my token"];`
 
+My  View Controller code looked like that:
+
 ```
 #import "ViewController.h"
 #import <Braintree/Braintree.h>
