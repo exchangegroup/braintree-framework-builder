@@ -146,7 +146,7 @@ Finally! You can use the `Braintree.framework` file in your app.
 
 My View Controller code looked like that:
 
-```
+```Objective-C
 #import "ViewController.h"
 #import <Braintree/Braintree.h>
 
@@ -155,16 +155,13 @@ My View Controller code looked like that:
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  // Will crash with error "BTClient could not initialize because the provided clientToken was invalid"
-  // Which is what we want. It means Braintree SDK is working!
-
-  [Braintree braintreeWithClientToken:@"client_token"];
+  [[Braintree alloc] init];
 }
 
 @end
 ```
 
-The app will crash with an error message from Braintree: "BTClient could not initialize because the provided clientToken was invalid". That means that our integration is working correctly. Job's done!
+* Run the app. If it runs it means that our Braintree SDK integration is working correctly. Job's done!
 
 ### Use Braintree SDK in a Swift app
 
@@ -174,6 +171,33 @@ To use Braintree SDK in a Swift app you will need to import its header in a brin
 * Click "Yes" in the next dialog that asks if you would like to configure a brindging header.
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/10_add_bridging_header.png' alt='Configure brindging header dialog' >
+
+* Xcode will create a header file with a similar name, like `MyApp-Bridging-Header.h`.
+
+* Import Braintree in your bridging header file:
+
+```
+#import <Braintree/Braintree.h>
+```
+
+* Instanciate a `Braintree` object in your view controller, to check that it's working.
+
+
+```Swift
+import UIKit
+
+class ViewController: UIViewController {
+  var braintree: Braintree?
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    braintree = Braintree()
+  }
+}
+```
+
+* Run the app to check if it's working.
 
 ## Reference
 
