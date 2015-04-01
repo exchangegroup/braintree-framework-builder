@@ -130,7 +130,7 @@ it opens a Finder containing `Braintree.framework` file.
 
 In addition to the executable code the framework contains two bundles with localization strings. That's where frameworks are handy - they can contain assets.
 
-If you have problem building the framework, check `PROJECT_NAME=BraintreeFrameworkBuilder` line in `build_framework.sh`. It needs to be the same as the name of your project.
+If you have problem building the framework, check `PROJECT_NAME=BraintreeFrameworkBuilder` line in `build_framework.sh`. This variable value needs to be the same as the name of your project.
 
 ### Add `Braintree.framework` to your app
 
