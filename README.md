@@ -173,6 +173,7 @@ To use Braintree SDK in a Swift app you will need to import its header in a brin
 * To create a brindging header, select File > New > Source > Objective-C File. Name it anything you want, it will be a temporary file.
 * Click "Yes" in the next dialog that asks if you would like to configure a brindging header.
 
+<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/10_add_bridging_header.png' alt='Configure brindging header dialog' >
 
 ## Reference
 
