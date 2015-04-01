@@ -56,7 +56,11 @@ You `Braintree.h` file will look like this:
 
 ### Set iOS deployment target version
 
-Setup lower iOS deployment target versions   If you want to use framework in earlier versions of iOS
+Set a lower iOS deployment target version if you want to use framework in app that supports earlier versions of iOS. I set it to version 7.0.
+
+* Use lower iOS version in Project settings > Info > iOS Deployment Target.
+
+<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/09_ios_deployment_target.png' sec='Set iOS deployment target version' >
 
 ### Using BraintreeSDK in View Controller
 
