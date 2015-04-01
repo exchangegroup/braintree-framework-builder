@@ -113,8 +113,13 @@ chmod 764 common.sh
 ```
 
 It will build a universal framework, a Debug version.. When build finishes
-it will open a Finder containing `Braintree.framework` file. In addition to code the framework
-file contains two bundles with localization strings.
+it will open a Finder containing `Braintree.framework` file.
+
+<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/07_build_finished.png' alt='Finished building the framework' >
+
+
+In addition to code the framework contains two bundles with localization strings. That's where frameworks are handy - they can contain resources.
+
 * If you have problem building it, check `PROJECT_NAME=BraintreeFrameworkBuilder` line in `build_framework.sh`. It needs to be the  name of the project.
 
 ### Add Braintree.framework to your app
