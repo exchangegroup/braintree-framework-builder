@@ -87,12 +87,15 @@ mkdir scripts
 * Add two script files to `scripts` directory: [build_framework.sh](https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/build_framework.sh) and
 [common.sh](https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/common.sh).
 
-
 ```
 cd scripts
 curl -O https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/build_framework.sh
 curl -O https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/common.sh
 ```
+
+Your scripts directory will look like this in relation to your project directory:
+
+<img src='https://github.com/exchangegroup/braintree-framework-builder/blob/master/graphics/06_scripts.png' alt='Scripts in project directory' >
 
 * Add 'execute' permissions to those two scripts.
 
