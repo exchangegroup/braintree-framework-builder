@@ -48,7 +48,7 @@ You `Braintree.h` file will look like this:
 
 * Add "MessageUI" and "MobileCoreServices" frameworks into "Braintree" target > "Build Phases" > "Link Binary With Libraries" .
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/04_link_binary_with_libraries.png' alt='Link binary withlibraries' >
+<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/04_link_binary_with_libraries.png' alt='Link binary with libraries' >
 
 * Add `-ObjC` into "Braintree" target > "Build Phases" > "Other Linker Flags".
 
