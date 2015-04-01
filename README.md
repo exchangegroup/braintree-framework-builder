@@ -204,7 +204,7 @@ class ViewController: UIViewController {
 It took me about 30 minutes to build the Braintree.framework. Good thing is
 
 * We can now use Braintree in any Swift or Objective-C iOS app by just dragging the `Braintree.framework` file into "Embedded Binaries" section.
-* Your app will build quickly because Braintree source files have been already built into a framework.
+* Your app will build quickly because Braintree source files have been already built into the framework.
 
 ## Reference
 
