@@ -54,6 +54,10 @@ You `Braintree.h` file will look like this:
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/05_add_linker_flag.png' alt='Add linker flag' >
 
+### Set iOS deployment target version
+
+Setup lower iOS deployment target versions If you want to use framework in earlier versions of iOS
+
 ### Using BraintreeSDK in View Controller
 
 Let’s try using BraintreeSDK in View Controller.
@@ -135,6 +139,23 @@ Finally! You can use the `Braintree.framework` file in your app.
 
 * Add `#import <Braintree/Braintree.h>` into your view controller.
 * Call a Braintree method in your view controller, like this: `Braintree *braintree = [Braintree braintreeWithClientToken: @"my token"];`
+
+```
+#import "ViewController.h"
+#import <Braintree/Braintree.h>
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+  [super viewDidLoad];
+
+  // will crash with error "BTClient could not initialize because the provided clientToken was invalid"
+  // Which is what we want. It means Braintree SDK is loaded.
+  [Braintree braintreeWithClientToken:@"client_token"];
+}
+
+@end
+```
 
 The app will crash with an error message from Braintree: "BTClient could not initialize because the provided clientToken was invalid". That means that our integration is working correctly. Job's done!
 
