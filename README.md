@@ -161,7 +161,7 @@ My View Controller code looked like that:
 @end
 ```
 
-* Run the app. If it runs it means that our Braintree SDK integration is working correctly. Job's done!
+* Run the app. If it runs it means that our Braintree SDK integration is working correctly.
 
 ### Use Braintree SDK in a Swift app
 
@@ -198,6 +198,8 @@ class ViewController: UIViewController {
 ```
 
 * Run the app to check if it's working.
+
+## Job's done!
 
 ## Reference
 
