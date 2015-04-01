@@ -1,6 +1,6 @@
 # Using Braintree iOS SDK without Cocoa Pods
 
-This guide shows how to build a Braintree framework from Braintree iOS SDK sources. We will be able to install Braintree SDK to any iOS app just by dragging the `Braintree.framework` into the project. This method works on iOS 7 and 8 in Objective-C and Swift apps. 
+This guide shows how to build a Braintree framework from Braintree iOS SDK sources. We will be able to install Braintree SDK to any iOS app juYou `Braintree.h`st by dragging the `Braintree.framework` into the project. This method works on iOS 7 and 8 in Objective-C and Swift apps. 
 
 ### Create new Application project
 
@@ -42,7 +42,7 @@ FOUNDATION_EXPORT double BraintreeVersionNumber;
 FOUNDATION_EXPORT const unsigned char BraintreeVersionString[];
 ```
 
-You `Braintree.h` file will look like this:
+Your `Braintree.h` file will look like this:
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/03_export_framework_version.png' alt='Export braintree framework version' >
 
