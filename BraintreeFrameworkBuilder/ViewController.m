@@ -14,8 +14,9 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
 
-  // will crash with error "BTClient could not initialize because the provided clientToken was invalid"
-  // Which is what we want. It means Braintree SDK is loaded.
+  // Will crash with error "BTClient could not initialize because the provided clientToken was invalid"
+  // Which is what we want. It means Braintree SDK is working!
+  
   [Braintree braintreeWithClientToken:@"client_token"];
 }
 
