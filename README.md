@@ -4,6 +4,8 @@ This guide shows how to build a Braintree framework from Braintree iOS SDK sourc
 
 ### Create new Application project
 
+First, we need to create a project that will be used to build the Braintree framework.
+
 * File > New > Project > Application > Single View Application.
 * Set "BraintreeFrameworkBuilder" as "Product Name". No other name will work with this tutorial.
 * Set Objective-C as language.
