@@ -124,7 +124,7 @@ If you have problem building the framework, check `PROJECT_NAME=BraintreeFramewo
 
 ### Add `Braintree.framework` to your app
 
-Finally, you can use the `Braintree.framework` file in your app.
+Finally! You can use the `Braintree.framework` file in your app.
 
 * In your app, select its target, "General" tab and look for "Embedded Binaries" section.
 * Drag the `Braintree.framework` file you built in previous step into "Embedded Binaries".
@@ -136,7 +136,7 @@ Finally, you can use the `Braintree.framework` file in your app.
 * Add `#import <Braintree/Braintree.h>` into your view controller.
 * Call a Braintree method in your view controller, like this: `Braintree *braintree = [Braintree braintreeWithClientToken: @"my token"];`
 
-The app will crash with an error message from Braintree: "BTClient could not initialize because the provided clientToken was invalid". That means our integration is working correctly.
+The app will crash with an error message from Braintree: "BTClient could not initialize because the provided clientToken was invalid". That means that our integration is working correctly. Job's done!
 
 ## Reference
 
