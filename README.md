@@ -165,6 +165,8 @@ The app will crash with an error message from Braintree: "BTClient could not ini
 
 ## Reference
 
+These are the materials I used to make this guide.
+
 * "Building Modern Frameworks" WWDC 2014 video: https://developer.apple.com/videos/wwdc/2014/#416
 
 * Xcode 6 iOS Creating a Cocoa Touch Framework: http://stackoverflow.com/a/26691080/297131
