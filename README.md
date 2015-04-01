@@ -134,7 +134,7 @@ If you have problem building the framework, check `PROJECT_NAME=BraintreeFramewo
 
 ### Add `Braintree.framework` to your app
 
-Finally! You can use the `Braintree.framework` file in your app.
+Finally! You can use the `Braintree.framework` file in any of your apps.
 
 * In your app, select its target, "General" tab and look for "Embedded Binaries" section.
 * Drag the `Braintree.framework` file you built in previous step into "Embedded Binaries".
