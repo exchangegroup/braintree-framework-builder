@@ -201,6 +201,19 @@ class ViewController: UIViewController {
 
 * Run the app to check if it's working.
 
+### `Framework not found` error fix
+
+You may get the following error when building the app. It may happed if other targets in your app, like a test target, is importing code form the app target.
+
+> framework not found Braintree for architecture x86_64
+
+To fix the error:
+
+* Select "Braintree.framework" in the project navigator.
+* Enable its "Target Membership" in your other target(s).
+
+<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/11_framework_not_found_error_fix.png' alt='Framework not found fix' >
+
 ### Job's done!
 
 We have built the Braintree.framework. This is what I think is good about it:
