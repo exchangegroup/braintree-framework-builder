@@ -203,7 +203,7 @@ class ViewController: UIViewController {
 
 ### `Framework not found` error fix
 
-You may get the following error when building the app. It may happed if other targets in your app, like a test target, is importing code form the app target.
+You may get the following error when building the app. It may happen if other targets in your app (like a test target) is importing code form the app target.
 
 > framework not found Braintree for architecture x86_64
 
