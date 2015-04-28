@@ -1557,6 +1557,7 @@
 				2BC8A5241ACA6E9E0005B7B2 /* Frameworks */,
 				2BC8A5251ACA6E9E0005B7B2 /* Headers */,
 				2BC8A5261ACA6E9E0005B7B2 /* Resources */,
+				45D646911AEF36B5002133E3 /* Copy Locatization Resources */,
 			);
 			buildRules = (
 			);
@@ -1691,6 +1692,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		45D646911AEF36B5002133E3 /* Copy Locatization Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Locatization Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# ---- Copy UI  ----\n\nbuild_dest=\"${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}\"\n\ndest=\"${build_dest}/Braintree-UI-Localization.bundle\"\nmkdir -p \"${dest}\"\n\n# ---- Copy drop In ----\n\ncp -r ${SRCROOT}/Braintree/UI/Localization/*.lproj \"${dest}/\"\n                                           \ndest=\"${build_dest}/Braintree-Drop-In-Localization.bundle\"\nmkdir -p \"${dest}\"\n                                           \ncp -r ${SRCROOT}/Braintree/Drop-In/Localization/*.lproj \"${dest}/\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2BB50C8F1ACA6CE900116AB1 /* Sources */ = {
