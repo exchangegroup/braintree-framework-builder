@@ -173,7 +173,7 @@ Alternatively, if you are using Carthage you can add your repository to your app
 There is no need to do the previous step of building the Framework - Carthage will build it for you.
 
 ```
-github "your repository"
+github "your braintree builder repository"
 ```
 
 ### Use Braintree SDK in an Objective-C app
