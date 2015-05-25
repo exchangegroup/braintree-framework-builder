@@ -44,7 +44,7 @@
 		2BC8A6CA1ACA6EB80005B7B2 /* BTClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC8A57B1ACA6EB70005B7B2 /* BTClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BC8A6CB1ACA6EB80005B7B2 /* BTClientCardRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC8A57C1ACA6EB70005B7B2 /* BTClientCardRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BC8A6CC1ACA6EB80005B7B2 /* BTClientCardTokenizationRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC8A57D1ACA6EB70005B7B2 /* BTClientCardTokenizationRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2BC8A6CD1ACA6EB80005B7B2 /* BTClientToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC8A57E1ACA6EB70005B7B2 /* BTClientToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BC8A6CD1ACA6EB80005B7B2 /* BTClientToken.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC8A57E1ACA6EB70005B7B2 /* BTClientToken.h */; };
 		2BC8A6CE1ACA6EB80005B7B2 /* BTErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC8A57F1ACA6EB70005B7B2 /* BTErrors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BC8A6CF1ACA6EB80005B7B2 /* BTLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC8A5801ACA6EB70005B7B2 /* BTLogger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BC8A6D01ACA6EB80005B7B2 /* BTPaymentMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BC8A5811ACA6EB70005B7B2 /* BTPaymentMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -276,7 +276,7 @@
 		4510736C1B12B622005EF1AD /* BTUICoinbaseMonogramCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 451073681B12B622005EF1AD /* BTUICoinbaseMonogramCardView.m */; };
 		4510736D1B12B622005EF1AD /* BTUICoinbaseWordmarkVectorArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 451073691B12B622005EF1AD /* BTUICoinbaseWordmarkVectorArtView.h */; };
 		4510736E1B12B622005EF1AD /* BTUICoinbaseWordmarkVectorArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4510736A1B12B622005EF1AD /* BTUICoinbaseWordmarkVectorArtView.m */; };
-		451073711B12B6AB005EF1AD /* BTUICoinbaseButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4510736F1B12B6AB005EF1AD /* BTUICoinbaseButton.h */; };
+		451073711B12B6AB005EF1AD /* BTUICoinbaseButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4510736F1B12B6AB005EF1AD /* BTUICoinbaseButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		451073721B12B6AB005EF1AD /* BTUICoinbaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 451073701B12B6AB005EF1AD /* BTUICoinbaseButton.m */; };
 		451073781B12B72B005EF1AD /* Braintree-Coinbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 451073751B12B72B005EF1AD /* Braintree-Coinbase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		451073791B12B72B005EF1AD /* BTCoinbase.h in Headers */ = {isa = PBXBuildFile; fileRef = 451073761B12B72B005EF1AD /* BTCoinbase.h */; settings = {ATTRIBUTES = (Public, ); }; };
