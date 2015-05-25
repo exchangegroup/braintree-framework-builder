@@ -1,6 +1,6 @@
 # Using Braintree iOS SDK without Cocoa Pods
 
-This guide shows how to build a Braintree framework from Braintree iOS SDK sources. We will be able to install Braintree SDK to any iOS app just by dragging the `Braintree.framework` into the project. This method works on iOS 8+ in Objective-C and Swift apps.
+This guide shows how to build a Braintree framework from Braintree iOS SDK sources. We will be able to install Braintree SDK to any iOS app just by dragging the `Braintree.framework` into the project. This method works on iOS 8+ in Objective-C and Swift apps. This method can also be used with Carthage.
 
 ### Create new Application project
 
@@ -91,7 +91,7 @@ I use `Command-Shift-o` shortcut in Xcode to find files quickly.
 
 * Select Braintree target > Build Phases.
 * Click on "+" icon and select "New run script phase"
-* Pase the following code in the script text area.
+* Paste the following code into the script text area.
 
 ```bash
 # ---- Copy UI  ----
@@ -166,6 +166,17 @@ Finally! You can use the `Braintree.framework` file in any of your apps.
 * Drag the `Braintree.framework` file you built in previous step into "Embedded Binaries".
 
 <img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/08_drag_framework.png' alt='Drag braintree framework to Embedded Binaries' >
+
+### Add Braintree framework with Carthage
+
+If you are using Carthage you can add your repository to your app's Cartfile
+
+```
+github "your repository"
+```
+
+If you are using Carthage you do not need to do the previous step of building the Framework.
+Carthage will do it for you.
 
 ### Use Braintree SDK in an Objective-C app
 
