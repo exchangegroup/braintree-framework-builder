@@ -236,6 +236,9 @@ class ViewController: UIViewController {
 
 * Run the app to check if it's working.
 
+Check [this demo app](https://github.com/exchangegroup/UsingBraintreeSwiftCarthageDemo) that shows how to
+use Braintree drop-in UI in a Swift iOS app.
+
 ### `Framework not found` error fix
 
 You may get the following error when building the app. It may happen if other targets in your app (like a test target) is importing code form the app target.
@@ -259,6 +262,8 @@ We have built the Braintree.framework. This is what I think is good about it:
 ## Reference
 
 These are the materials I used to make this guide.
+
+* Swift demo app with Braintree drop-in UI: https://github.com/exchangegroup/UsingBraintreeSwiftCarthageDemo
 
 * "Building Modern Frameworks" WWDC 2014 video: https://developer.apple.com/videos/wwdc/2014/#416
 
