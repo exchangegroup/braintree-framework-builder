@@ -85,6 +85,30 @@ I use `Command-Shift-o` shortcut in Xcode to find files quickly.
 * In addition to `File not found` error you will also see `Include of non-modular header inside framework module …` errors. Make those complaining files "public" as well.
 1. I went through 33 header files in total, the work took about 10 minutes.
 
+### Add script phase
+
+* Select Braintree target > Build Phases.
+* Click on "+" icon and select "New run script phase"
+* Pase the following code in the script text area.
+
+```bash
+# ---- Copy UI  ----
+
+build_dest="${CONFIGURATION_BUILD_DIR}/${CONTENTS_FOLDER_PATH}"
+
+dest="${build_dest}/Braintree-UI-Localization.bundle"
+mkdir -p "${dest}"
+
+# ---- Copy drop In ----
+
+cp -r ${SRCROOT}/Braintree/UI/Localization/*.lproj "${dest}/"
+
+dest="${build_dest}/Braintree-Drop-In-Localization.bundle"
+mkdir -p "${dest}"
+
+cp -r ${SRCROOT}/Braintree/Drop-In/Localization/*.lproj "${dest}/"
+```
+
 ### Add scripts for building Braintree framework
 
 * Create `scripts` directory in your project root. I do it from a Terminal.
