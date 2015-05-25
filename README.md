@@ -170,7 +170,7 @@ Finally! You can use the `Braintree.framework` file in any of your apps.
 ### Add Braintree framework with Carthage
 
 Alternatively, if you are using Carthage you can add your repository to your app's Cartfile.
-There is no need to do the previous step of building the Framework - carthage will build it for you.
+There is no need to do the previous step of building the Framework - Carthage will build it for you.
 
 ```
 github "your repository"
