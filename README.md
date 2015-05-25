@@ -87,6 +87,8 @@ I use `Command-Shift-o` shortcut in Xcode to find files quickly.
 
 ### Add script phase
 
+<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/06.1_script_copy_localization_resources.png' width='816' alt='Add script phase'>
+
 * Select Braintree target > Build Phases.
 * Click on "+" icon and select "New run script phase"
 * Pase the following code in the script text area.
