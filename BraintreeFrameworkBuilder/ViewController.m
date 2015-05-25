@@ -14,7 +14,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  [[Braintree alloc] init];
+  __unused Braintree *braintree = [[Braintree alloc] init];
 }
 
 @end
