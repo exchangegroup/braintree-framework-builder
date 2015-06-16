@@ -16,6 +16,8 @@ FOUNDATION_EXPORT const unsigned char BraintreeVersionString[];
 #import <Braintree/Braintree-Coinbase.h>
 #import <Braintree/Braintree-3D-Secure.h>
 
+#import <Braintree/Braintree-Version.h>
+
 @class Braintree;
 @class PKPayment;
 
