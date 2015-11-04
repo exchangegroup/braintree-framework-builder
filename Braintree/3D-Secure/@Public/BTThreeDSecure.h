@@ -1,5 +1,3 @@
-#pragma message "⚠️ Braintree's 3D Secure API for iOS is currently in beta: BTThreeDSecure.h may change. (Note: Gateway support is stable.)"
-
 #import <Foundation/Foundation.h>
 
 #import "BTClient.h"
