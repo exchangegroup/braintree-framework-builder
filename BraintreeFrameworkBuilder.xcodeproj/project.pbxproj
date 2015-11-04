@@ -25,7 +25,6 @@
 		2BB3135F1BE9B9A500C5AC54 /* BTThreeDSecureLocalizedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB311DF1BE9B9A400C5AC54 /* BTThreeDSecureLocalizedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB313601BE9B9A500C5AC54 /* BTThreeDSecureLocalizedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB311E01BE9B9A400C5AC54 /* BTThreeDSecureLocalizedString.m */; };
 		2BB313611BE9B9A500C5AC54 /* Three-D-Secure.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2BB311E11BE9B9A400C5AC54 /* Three-D-Secure.strings */; };
-		2BB313631BE9B9A500C5AC54 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2BB311F91BE9B9A400C5AC54 /* .gitignore */; };
 		2BB313641BE9B9A500C5AC54 /* Braintree-API.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB311FB1BE9B9A400C5AC54 /* Braintree-API.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB313651BE9B9A500C5AC54 /* Braintree-Version.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB311FC1BE9B9A400C5AC54 /* Braintree-Version.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB313661BE9B9A500C5AC54 /* BTApplePayPaymentMethod.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB311FD1BE9B9A400C5AC54 /* BTApplePayPaymentMethod.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -151,7 +150,6 @@
 		2BB313E31BE9B9A500C5AC54 /* BTPaymentApplePayProvider_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB3129F1BE9B9A500C5AC54 /* BTPaymentApplePayProvider_Internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB313E41BE9B9A500C5AC54 /* BTPaymentProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB312A01BE9B9A500C5AC54 /* BTPaymentProvider.m */; };
 		2BB313E51BE9B9A500C5AC54 /* BTPaymentProviderErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB312A11BE9B9A500C5AC54 /* BTPaymentProviderErrors.m */; };
-		2BB313E61BE9B9A500C5AC54 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2BB312A31BE9B9A500C5AC54 /* .gitignore */; };
 		2BB313E71BE9B9A500C5AC54 /* Braintree-PayPal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB312A51BE9B9A500C5AC54 /* Braintree-PayPal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB313E81BE9B9A500C5AC54 /* BTClient+BTPayPal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB312A61BE9B9A500C5AC54 /* BTClient+BTPayPal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB313E91BE9B9A500C5AC54 /* BTErrors+BTPayPal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB312A71BE9B9A500C5AC54 /* BTErrors+BTPayPal.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -176,7 +174,6 @@
 		2BB313FC1BE9B9A500C5AC54 /* PayPalTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB312BC1BE9B9A500C5AC54 /* PayPalTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB313FE1BE9B9A500C5AC54 /* BTPayPalHorizontalSignatureWhiteView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB312BF1BE9B9A500C5AC54 /* BTPayPalHorizontalSignatureWhiteView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB313FF1BE9B9A500C5AC54 /* BTPayPalHorizontalSignatureWhiteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BB312C01BE9B9A500C5AC54 /* BTPayPalHorizontalSignatureWhiteView.m */; };
-		2BB314001BE9B9A500C5AC54 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 2BB312C21BE9B9A500C5AC54 /* .gitignore */; };
 		2BB314011BE9B9A500C5AC54 /* Braintree-Payments-UI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB312C31BE9B9A500C5AC54 /* Braintree-Payments-UI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB314021BE9B9A500C5AC54 /* BTUIPaymentMethodType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB312C41BE9B9A500C5AC54 /* BTUIPaymentMethodType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2BB314031BE9B9A500C5AC54 /* BTUILocalizedString.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BB312C61BE9B9A500C5AC54 /* BTUILocalizedString.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1696,7 +1693,7 @@
 		2BB50C8B1ACA6CE900116AB1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "The Exchange Group Pty Ltd";
 				TargetAttributes = {
 					2BB50C921ACA6CE900116AB1 = {
@@ -1779,9 +1776,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BB314051BE9B9A500C5AC54 /* UI.strings in Resources */,
-				2BB314001BE9B9A500C5AC54 /* .gitignore in Resources */,
-				2BB313E61BE9B9A500C5AC54 /* .gitignore in Resources */,
-				2BB313631BE9B9A500C5AC54 /* .gitignore in Resources */,
 				2BB313DC1BE9B9A500C5AC54 /* Drop-In.strings in Resources */,
 				2BB313611BE9B9A500C5AC54 /* Three-D-Secure.strings in Resources */,
 			);
@@ -2115,6 +2109,7 @@
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -2180,6 +2175,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BraintreeFrameworkBuilder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.theexchangegroup.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2190,6 +2186,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BraintreeFrameworkBuilder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.theexchangegroup.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -2198,16 +2195,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = BraintreeFrameworkBuilderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.theexchangegroup.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BraintreeFrameworkBuilder.app/BraintreeFrameworkBuilder";
 			};
@@ -2217,12 +2212,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BraintreeFrameworkBuilderTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.theexchangegroup.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BraintreeFrameworkBuilder.app/BraintreeFrameworkBuilder";
 			};
@@ -2249,7 +2242,9 @@
 					"$(PROJECT_DIR)/Braintree/PayPal/mSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.theexchangegroup.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers/Braintree";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2273,7 +2268,9 @@
 					"$(PROJECT_DIR)/Braintree/PayPal/mSDK",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.theexchangegroup.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Headers/Braintree";
 				SKIP_INSTALL = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -2283,16 +2280,14 @@
 		2BC8A5431ACA6E9E0005B7B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = BraintreeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.theexchangegroup.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BraintreeFrameworkBuilder.app/BraintreeFrameworkBuilder";
 			};
@@ -2301,12 +2296,10 @@
 		2BC8A5441ACA6E9E0005B7B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BraintreeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "au.com.theexchangegroup.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BraintreeFrameworkBuilder.app/BraintreeFrameworkBuilder";
 			};
