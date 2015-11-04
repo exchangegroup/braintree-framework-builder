@@ -6,6 +6,8 @@
 #import "BTClient+Offline.h"
 
 NSString *const BTClientPayPalMobileEnvironmentName = @"Braintree";
+NSString *const BTPayPalScopeAddress = @"address";
+
 NSString *const BTClientPayPalConfigurationError = @"The PayPal SDK could not be initialized. Perhaps client token did not contain a valid PayPal configuration.";
 
 @implementation BTClient (BTPayPal)
@@ -60,7 +62,11 @@ NSString *const BTClientPayPalConfigurationError = @"The PayPal SDK could not be
 }
 
 - (NSSet *)btPayPal_scopes {
-    return [NSSet setWithObjects:kPayPalOAuth2ScopeFuturePayments, kPayPalOAuth2ScopeEmail, nil];
+    NSSet *defaultScopes = [NSSet setWithObjects:kPayPalOAuth2ScopeFuturePayments, kPayPalOAuth2ScopeEmail, nil];
+    if (self.additionalPayPalScopes != nil) {
+        return [self.additionalPayPalScopes setByAddingObjectsFromSet:defaultScopes];
+    }
+    return defaultScopes;
 }
 
 - (PayPalProfileSharingViewController *)btPayPal_profileSharingViewControllerWithDelegate:(id<PayPalProfileSharingDelegate>)delegate {

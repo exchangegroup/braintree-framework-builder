@@ -11,10 +11,6 @@
 #import "BTDropInViewController.h"
 
 #import "BTAppSwitch.h"
-#import "BTVenmoAppSwitchHandler.h"
-#import "BTPayPalAppSwitchHandler.h"
-
-#import "BTCoinbase.h"
 
 @interface Braintree ()
 @property (nonatomic, strong) BTClient *client;
@@ -23,6 +19,10 @@
 @end
 
 @implementation Braintree
+
++ (Braintree *)braintreeWithClientToken:(NSString *)clientToken {
+    return [[self alloc] initWithClientToken:clientToken];
+}
 
 + (void)setupWithClientToken:(NSString *)clientToken
                   completion:(BraintreeCompletionBlock)completionBlock {
@@ -160,10 +160,6 @@
 
 #pragma mark Deprecated
 
-+ (Braintree *)braintreeWithClientToken:(NSString *)clientToken {
-    return [(Braintree *)[self alloc] initWithClientToken:clientToken];
-}
-
 - (BTPayPalButton *)payPalButtonWithDelegate:(id<BTPayPalButtonDelegate>)delegate {
     [self.client postAnalyticsEvent:@"custom.ios.paypal.init"
                             success:nil
@@ -198,18 +194,10 @@
 
 + (void)setReturnURLScheme:(NSString *)scheme {
     [BTAppSwitch sharedInstance].returnURLScheme = scheme;
-    [self initAppSwitchingOptions];
 }
 
 + (BOOL)handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication {
-    [self initAppSwitchingOptions];
     return [[BTAppSwitch sharedInstance] handleReturnURL:url sourceApplication:sourceApplication];
-}
-
-+ (void)initAppSwitchingOptions {
-    [[BTAppSwitch sharedInstance] addAppSwitching:[BTVenmoAppSwitchHandler sharedHandler]];
-    [[BTAppSwitch sharedInstance] addAppSwitching:[BTPayPalAppSwitchHandler sharedHandler]];
-    [[BTAppSwitch sharedInstance] addAppSwitching:[BTCoinbase sharedCoinbase]];
 }
 
 @end

@@ -1,12 +1,11 @@
-//#pragma message "⚠️ Braintree's 3D Secure API for iOS is currently in beta: BTThreeDSecure.h may change. (Note: Gateway support is stable.)"
+#pragma message "⚠️ Braintree's 3D Secure API for iOS is currently in beta: BTThreeDSecure.h may change. (Note: Gateway support is stable.)"
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 #import "BTClient.h"
 #import "BTPaymentMethodCreationDelegate.h"
 #import "BTThreeDSecureErrors.h"
 #import "BTCardPaymentMethod+BTThreeDSecureInfo.h"
-#import "BTThreeDSecureResponse.h"
 
 ///  3D Secure Verification manager
 ///

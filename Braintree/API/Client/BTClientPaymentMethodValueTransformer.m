@@ -5,6 +5,8 @@
 #import "BTMutablePayPalPaymentMethod.h"
 #import "BTMutableApplePayPaymentMethod.h"
 #import "BTCoinbasePaymentMethod_Internal.h"
+#import "BTPostalAddress.h"
+#import "BTPostalAddress_Internal.h"
 
 @implementation BTClientPaymentMethodValueTransformer
 
@@ -44,8 +46,21 @@
         BTMutablePayPalPaymentMethod *payPal = [[BTMutablePayPalPaymentMethod alloc] init];
 
         payPal.nonce = [responseParser stringForKey:@"nonce"];
-        payPal.email = [[responseParser responseParserForKey:@"details"] stringForKey:@"email"];
-
+        
+        BTAPIResponseParser *detailsParser = [responseParser responseParserForKey:@"details"];
+        payPal.email = [detailsParser stringForKey:@"email"];
+        NSDictionary *payerInfoDict = [detailsParser dictionaryForKey:@"payerInfo"];
+        if (payerInfoDict && payerInfoDict[BTPostalAddressKeyAccountAddress]) {
+            NSDictionary *addressDictionary = payerInfoDict[BTPostalAddressKeyAccountAddress];
+            payPal.billingAddress = [[BTPostalAddress alloc] init];
+            payPal.billingAddress.streetAddress = addressDictionary[BTPostalAddressKeyStreetAddress];
+            payPal.billingAddress.extendedAddress = addressDictionary[BTPostalAddressKeyExtendedAddress];
+            payPal.billingAddress.locality = addressDictionary[BTPostalAddressKeyLocality];
+            payPal.billingAddress.region = addressDictionary[BTPostalAddressKeyRegion];
+            payPal.billingAddress.postalCode = addressDictionary[BTPostalAddressKeyPostalCode];
+            payPal.billingAddress.countryCodeAlpha2 = addressDictionary[BTPostalAddressKeyCountry];
+        }
+        
         // Braintree gateway has some inconsistent behavior depending on
         // the type of nonce, and sometimes returns "PayPal" for description,
         // and sometimes returns a real identifying string. The former is not
