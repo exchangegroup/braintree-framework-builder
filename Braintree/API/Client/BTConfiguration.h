@@ -1,4 +1,4 @@
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 #import "BTClientToken.h"
 #import "BTAPIResponseParser.h"
@@ -122,5 +122,7 @@ extern NSString *const BTConfigurationPayPalNonLiveDefaultValueMerchantUserAgree
 
 //// Initialize Configuration with a configuration response parser fetched from Braintree.
 - (instancetype)initWithResponseParser:(BTAPIResponseParser *)responseParser error:(NSError **)error NS_DESIGNATED_INITIALIZER;
+
+- (instancetype)init __attribute__((unavailable("Please use initWithResponseParser:error: instead.")));
 
 @end

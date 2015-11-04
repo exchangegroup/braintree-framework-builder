@@ -1,4 +1,4 @@
-@import PassKit;
+#import <PassKit/PassKit.h>
 
 #import "BTClient_Internal.h"
 #import "BTClientToken.h"
@@ -114,6 +114,7 @@
 
 - (id)copyWithZone:(NSZone *)zone {
     BTClient *copiedClient = [[BTClient allocWithZone:zone] init];
+    copiedClient.additionalPayPalScopes = [_additionalPayPalScopes copy];
     copiedClient.clientToken = [_clientToken copy];
     copiedClient.configuration = [_configuration copy];
     copiedClient.clientApiHttp = [_clientApiHttp copy];
@@ -337,16 +338,34 @@
     if (encodedPaymentData) {
         tokenParameterValue[@"paymentData"] = encodedPaymentData;
     }
-    if (payment.token.paymentInstrumentName) {
-        tokenParameterValue[@"paymentInstrumentName"] = payment.token.paymentInstrumentName;
-    }
+	
+    // iOS 9 path: PKPaymentToken -paymentMethod is new in iOS 9
+	if ([payment.token respondsToSelector:@selector(paymentMethod)]) {
+		if (payment.token.paymentMethod.network) {
+			tokenParameterValue[@"paymentNetwork"] = payment.token.paymentMethod.network;
+		}
+		
+		if (payment.token.paymentMethod.displayName) {
+			tokenParameterValue[@"paymentInstrumentName"] = payment.token.paymentMethod.displayName;
+		}
+	} else {
+        // iOS 8 path: methods were deprecated in iOS 9
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+		if (payment.token.paymentInstrumentName) {
+			tokenParameterValue[@"paymentInstrumentName"] = payment.token.paymentInstrumentName;
+		}
+		
+		if (payment.token.paymentNetwork) {
+			tokenParameterValue[@"paymentNetwork"] = payment.token.paymentNetwork;
+		}
+#pragma clang diagnostic pop
+	}
+
     if (payment.token.transactionIdentifier) {
         tokenParameterValue[@"transactionIdentifier"] = payment.token.transactionIdentifier;
     }
-    if (payment.token.paymentNetwork) {
-        tokenParameterValue[@"paymentNetwork"] = payment.token.paymentNetwork;
-    }
-
+    
     NSMutableDictionary *requestParameters = [self metaPostParameters];
     [requestParameters addEntriesFromDictionary:@{ @"applePaymentToken": tokenParameterValue,
                                                    @"authorization_fingerprint": self.clientToken.authorizationFingerprint,
@@ -359,10 +378,21 @@
 
                 BTMutableApplePayPaymentMethod *paymentMethod = [applePayCards firstObject];
 
-                paymentMethod.shippingAddress = payment.shippingAddress;
                 paymentMethod.shippingMethod = payment.shippingMethod;
+				
+                // iOS 9 path: shippingContact and billingContact are new in iOS 9
+				if ([payment respondsToSelector:@selector(shippingContact)]) {
+					paymentMethod.shippingContact = payment.shippingContact;
+                    paymentMethod.billingContact = payment.billingContact;
+				}
+                
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+                // To ensure backwards compatibility with old iOS 8 code, always pass through the deprecated addresses, even on iOS 9 devices
+                paymentMethod.shippingAddress = payment.shippingAddress;
                 paymentMethod.billingAddress = payment.billingAddress;
-
+#pragma clang diagnostic pop
+                
                 successBlock([paymentMethod copy]);
             }
         } else {
@@ -379,17 +409,31 @@
 }
 #endif
 
-- (void)savePaypalPaymentMethodWithAuthCode:(NSString*)authCode
+- (void)savePaypalPaymentMethodWithAuthCode:(NSString *)authCode
                    applicationCorrelationID:(NSString *)correlationId
                                     success:(BTClientPaypalSuccessBlock)successBlock
                                     failure:(BTClientFailureBlock)failureBlock {
+    return [self savePaypalPaymentMethodWithAuthCode:authCode
+                    optionalApplicationCorrelationID:correlationId
+                                             success:successBlock
+                                             failure:failureBlock];
+}
 
+// Required since correlationId in the signature above is __nonnull
+- (void)savePaypalPaymentMethodWithAuthCode:(NSString *)authCode
+           optionalApplicationCorrelationID:(NSString *)correlationId
+                                    success:(BTClientPaypalSuccessBlock)successBlock
+                                    failure:(BTClientFailureBlock)failureBlock {
     NSMutableDictionary *requestParameters = [self metaPostParameters];
+    // To preserve backwards compatibility - only set shouldValidate to FALSE when requesting additional scopes
+    BOOL shouldValidate = [self.additionalPayPalScopes count] == 0;
     [requestParameters addEntriesFromDictionary:@{ @"paypal_account": @{
                                                            @"consent_code": authCode ?: NSNull.null,
-                                                           @"correlation_id": correlationId ?: NSNull.null
+                                                           @"correlation_id": correlationId ?: NSNull.null,
+                                                           @"options": @{@"validate": @(shouldValidate)}
                                                            },
-                                                   @"authorization_fingerprint": self.clientToken.authorizationFingerprint,
+                                                   @"authorization_fingerprint": self.clientToken.authorizationFingerprint
+                                                   
                                                    }];
 
     [self.clientApiHttp POST:@"v1/payment_methods/paypal_accounts" parameters:requestParameters completion:^(BTHTTPResponse *response, NSError *error){
@@ -415,7 +459,7 @@
                                     success:(BTClientPaypalSuccessBlock)successBlock
                                     failure:(BTClientFailureBlock)failureBlock {
     [self savePaypalPaymentMethodWithAuthCode:authCode
-                     applicationCorrelationID:nil
+             optionalApplicationCorrelationID:nil
                                       success:successBlock
                                       failure:failureBlock];
 }
@@ -441,7 +485,7 @@
                                                        @"authorization_fingerprint": self.clientToken.authorizationFingerprint
                                                        }];
 
-        [[BTLogger sharedLogger] debug:@"BTClient postAnalyticsEvent:%@", eventKind];
+        [[BTLogger sharedLogger] debug:@"BTClient postAnalyticsEvent:%@ session:%@", eventKind, self.metadata.sessionId];
 
         [self.analyticsHttp POST:@"/"
                       parameters:requestParameters
@@ -474,7 +518,7 @@
     if (self.configuration.merchantAccountId) {
         requestParameters[@"merchant_account_id"] = self.configuration.merchantAccountId;
     }
-    NSString *urlSafeNonce = [nonce stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *urlSafeNonce = [nonce stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLPathAllowedCharacterSet]];
     [self.clientApiHttp POST:[NSString stringWithFormat:@"v1/payment_methods/%@/three_d_secure/lookup", urlSafeNonce]
                   parameters:requestParameters
                   completion:^(BTHTTPResponse *response, NSError *error){
@@ -593,6 +637,7 @@
     NSMutableDictionary *mutableMetaValue = [metaValue mutableCopy];
     mutableMetaValue[@"integration"] = self.metadata.integrationString;
     mutableMetaValue[@"source"] = self.metadata.sourceString;
+    mutableMetaValue[@"sessionId"] = self.metadata.sessionId;
 
     result[@"_meta"] = mutableMetaValue;
     return result;
