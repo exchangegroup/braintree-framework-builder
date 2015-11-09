@@ -10,7 +10,7 @@ First, we need to create a project that will be used to build the Braintree fram
 * Set "BraintreeFrameworkBuilder" as "Product Name". No other name will work with this tutorial.
 * Set Objective-C as language.
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/00_create_builder_project.png' alt='Create Braintree framework builder project' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/00_create_builder_project.png' alt='Create Braintree framework builder project' >
 
 ### Create Cocoa Touch Framework the target
 
@@ -18,7 +18,7 @@ First, we need to create a project that will be used to build the Braintree fram
 * Use "Braintree" as "Product Name". No other name will work.
 * Use Objective-C as "Language".
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/001_createBraintree_target.png' alt='Add braintree target' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/001_createBraintree_target.png' alt='Add braintree target' >
 
 ### Add braintree source code files to target
 
@@ -33,7 +33,7 @@ Those files are temporary so you can clone it into the Downloads or Documents di
 
 * Drag the **contents** of braintree_ios/Braintree/ directory you just cloned into the Braintree group in Xcode. Important: drag not the "braintree_ios/Braintree/" directory, but all the files and folders from it. Your project navigator will look like this:
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/01_braintree_target_group_structure.png' alt='braintree target structure in project navigator' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/01_braintree_target_group_structure.png' alt='braintree target structure in project navigator' >
 
 * Paste the following code into `Braintree.h` file after `#import <UIKit/UIKit.h>` line.
 
@@ -44,17 +44,17 @@ FOUNDATION_EXPORT const unsigned char BraintreeVersionString[];
 
 The top of your `Braintree.h` file will look like this:
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/03_export_framework_version.png' alt='Export braintree framework version' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/03_export_framework_version.png' alt='Export braintree framework version' >
 
 ### Setup Braintree target
 
 * Add "Accelerate", "MessageUI" and "MobileCoreServices" frameworks into "Braintree" target > "Build Phases" > "Link Binary With Libraries".
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/04_link_binary_with_libraries.png' alt='Link binary with libraries' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/04_link_binary_with_libraries.png' alt='Link binary with libraries' >
 
 * Add `-ObjC` into "Braintree" target > "Build Phases" > "Other Linker Flags".
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/05_add_linker_flag.png' alt='Add linker flag' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/05_add_linker_flag.png' alt='Add linker flag' >
 
 ### Set iOS deployment target version
 
@@ -62,7 +62,7 @@ Set a lower iOS deployment target version if you want to use the Braintree frame
 
 * Use lower iOS version in Project settings > Info > iOS Deployment Target.
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/09_ios_deployment_target.png' sec='Set iOS deployment target version' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/09_ios_deployment_target.png' sec='Set iOS deployment target version' >
 
 ### Using BraintreeSDK in View Controller
 
@@ -75,7 +75,7 @@ Let’s try using BraintreeSDK in View Controller.
 
 We need to make some header files in the Braintree framework public.
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/02_make_header_public.png' alt='Change header to public in Xcode' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/02_make_header_public.png' alt='Change header to public in Xcode' >
 
 * Change "Target Membership" of Braintree.h to "public".
 * Build again. You will see a new error: `'Braintree/Braintree-API.h' file not found`. Find `Braintree-API.h` file and make it "public".
@@ -87,7 +87,7 @@ I use `Command-Shift-o` shortcut in Xcode to find files quickly.
 
 ### Add script phase
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/06.1_script_copy_localization_resources.png' width='816' alt='Add script phase'>
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/06.1_script_copy_localization_resources.png' width='816' alt='Add script phase'>
 
 * Select Braintree target > Build Phases.
 * Click on "+" icon and select "New run script phase"
@@ -120,18 +120,18 @@ cd <your BraintreeFrameworkBuilder project directory>
 mkdir scripts
 ```
 
-* Add two script files to `scripts` directory: [build_framework.sh](https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/build_framework.sh) and
-[common.sh](https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/common.sh).
+* Add two script files to `scripts` directory: [build_framework.sh](https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/scripts/build_framework.sh) and
+[common.sh](https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/scripts/common.sh).
 
 ```
 cd scripts
-curl -O https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/build_framework.sh
-curl -O https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/scripts/common.sh
+curl -O https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/scripts/build_framework.sh
+curl -O https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/scripts/common.sh
 ```
 
 Your scripts directory will look like this in relation to your project directory:
 
-<img src='https://github.com/exchangegroup/braintree-framework-builder/blob/master/graphics/06_scripts.png' alt='Scripts in project directory' >
+<img src='https://github.com/marketplacer/braintree-framework-builder/blob/master/graphics/06_scripts.png' alt='Scripts in project directory' >
 
 * Add 'execute' permissions to those two scripts.
 
@@ -151,7 +151,7 @@ chmod 764 common.sh
 It will build a universal framework into "mybuild/Braintree.framework". When build finishes
 it opens a Finder containing `Braintree.framework` file.
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/07_build_finished.png' alt='Finished building the framework' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/07_build_finished.png' alt='Finished building the framework' >
 
 
 In addition to the executable code the framework contains two bundles with localization strings. That's where frameworks are handy - they can contain assets.
@@ -165,7 +165,7 @@ Finally! You can use the `Braintree.framework` file in any of your apps.
 * In your app, select its target, "General" tab and look for "Embedded Binaries" section.
 * Drag the `Braintree.framework` file you built in previous step into "Embedded Binaries".
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/08_drag_framework.png' alt='Drag braintree framework to Embedded Binaries' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/08_drag_framework.png' alt='Drag braintree framework to Embedded Binaries' >
 
 ### Add Braintree framework with Carthage
 
@@ -207,7 +207,7 @@ To use Braintree SDK in a Swift app you will need to import its header in a brid
 * To create a bridging header, select File > New > Source > Objective-C File. Name it anything you want, it will be a temporary file.
 * Click "Yes" in the next dialog that asks if you would like to configure a bridging header.
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/10_add_bridging_header.png' alt='Configure bridging header dialog' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/10_add_bridging_header.png' alt='Configure bridging header dialog' >
 
 * Xcode will create a header file with a name like `MyApp-Bridging-Header.h`.
 
@@ -236,7 +236,7 @@ class ViewController: UIViewController {
 
 * Run the app to check if it's working.
 
-Check [this demo app](https://github.com/exchangegroup/UsingBraintreeDropInUIInSwiftDemo) that shows how to
+Check [this demo app](https://github.com/marketplacer/UsingBraintreeDropInUIInSwiftDemo) that shows how to
 use Braintree drop-in UI in a Swift iOS app.
 
 ### `Framework not found` error fix
@@ -250,7 +250,7 @@ To fix the error:
 * Select "Braintree.framework" in the project navigator.
 * Enable its "Target Membership" in your other target(s).
 
-<img src='https://raw.githubusercontent.com/exchangegroup/braintree-framework-builder/master/graphics/11_framework_not_found_error_fix.png' alt='Framework not found fix' >
+<img src='https://raw.githubusercontent.com/marketplacer/braintree-framework-builder/master/graphics/11_framework_not_found_error_fix.png' alt='Framework not found fix' >
 
 ### Job's done!
 
@@ -263,7 +263,7 @@ We have built the Braintree.framework. This is what I think is good about it:
 
 These are the materials I used to make this guide.
 
-* Swift demo app with Braintree drop-in UI: https://github.com/exchangegroup/UsingBraintreeDropInUIInSwiftDemo
+* Swift demo app with Braintree drop-in UI: https://github.com/marketplacer/UsingBraintreeDropInUIInSwiftDemo
 
 * "Building Modern Frameworks" WWDC 2014 video: https://developer.apple.com/videos/wwdc/2014/#416
 
