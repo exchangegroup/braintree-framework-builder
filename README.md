@@ -1,4 +1,4 @@
-> 🐸 Braintree SDK version 4.0 supports setup without CocoaPods now. Consider using the official Braintree instead of this project.
+> 🐸 Braintree SDK version 4.0 supports setup without CocoaPods now. Consider using the official Braintree SDK instead of this project.
 
 # Using Braintree iOS SDK without Cocoa Pods
 
